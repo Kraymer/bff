@@ -1,0 +1,32 @@
+#!/bin/bash
+
+usage ()
+{
+    echo "Usage: bff PATTERN
+Generate branch name generator by concatenating first modified filename that
+matches pattern and its MD5 checksum."
+}
+
+bff() {
+	files=`git ls-files -m`
+	for filepath in $files
+	do
+	  filename="${filepath##*/}"
+	  file_noext="${filename%.*}"
+
+	  if [[ ${filepath} =~ ${PATTERN} ]]; then
+	  	md5=$(md5sum "$filepath" | cut -d ' ' -f 1 |  head -c 5)
+	  	echo "${file_noext}"-"${md5}"
+	  fi
+	done
+	}
+
+main() {
+    if [ "$#" -ne 1 ]; then
+        usage
+        exit
+    fi
+	PATTERN=$1
+	bff
+}
+main "$@"
