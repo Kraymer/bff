@@ -1,7 +1,7 @@
 # bff
 Branch from filename!
 
-## Usage
+## ⊱ Usage ⊰
 
 ~~~
 ❯ bff
@@ -10,9 +10,7 @@ Generate git branch name by concatenating first modified filename that
 matches pattern and its MD5 checksum.
 ~~~
 
-## Example
-
-~~~
+## ⊱ Example ⊰
 
 Imagine I'm editing a score sheet, a tedious work, that involve fixing many
 misplaced notes.
@@ -29,11 +27,12 @@ Changes not staged for commit:
 For the 50th time I must named my branch like "fix: Queen-somebody_to_love typo" or something while paying attention to not reuse
 an existing branch name !
 
-Imma lemme introduce you `bff` :
+Imma lemme introduce you to `bff` :
 
 ~~~
 ❯ git checkout -b `bff mscx`
 M	Repertoire/16-Intermediate_III/Queen-Somebody_to_love/Queen-somebody_to_love.mscx
+
 Switched to a new branch 'Queen-somebody_to_love-6c2d7'
 ~~~
 
