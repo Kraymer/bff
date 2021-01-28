@@ -24,7 +24,7 @@ Changes not staged for commit:
 	modified:   Repertoire/Queen-Somebody_to_love/Queen-somebody_to_love.mscx
 ~~~
 
-For the 50th time I must named my branch like "fix: Queen-somebody_to_love typo" or something while paying attention to not reuse
+For the 50th time I must named my branch like _"fix: Queen-somebody_to_love typo"_ or something while paying attention to not reuse
 an existing branch name !
 
 Imma lemme introduce you to `bff` :
